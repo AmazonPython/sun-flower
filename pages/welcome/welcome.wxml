@@ -1,0 +1,4 @@
+<!--pages/welcome/welcome.wxml-->
+<image src="/images/avatar/4.png"></image>
+<text>Welcome! Nova</text>
+<button></button>
