@@ -1,4 +1,9 @@
 <!--pages/welcome/welcome.wxml-->
-<image src="/images/avatar/4.png"></image>
-<text>Welcome! Nova</text>
-<button></button>
+<!-- flex 容器布局 -->
+<view class="container">
+    <!-- 第三方组件 -->
+    <l-avatar class="user-avatar" open-data="{{ ['userAvatarUrl'] }}" size="200"/>
+    <text class="motto">Welcome! Nova</text>
+    <!-- 自定义 button 样式 -->
+    <view class="journey-container"><text class="journey">开启小程序之旅</text></view>
+</view>

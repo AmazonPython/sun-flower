@@ -1,0 +1,22 @@
+{
+  "name": "sunflower",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmazonPython/sun-flower.git"
+  },
+  "author": "Nova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AmazonPython/sun-flower/issues"
+  },
+  "homepage": "https://github.com/AmazonPython/sun-flower#readme",
+  "dependencies": {
+    "lin-ui": "^0.9.11"
+  }
+}
