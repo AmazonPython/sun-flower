@@ -1,0 +1,4 @@
+<!--pages/posts/posts.wxml-->
+<view>
+    <swiper></swiper>
+</view>
