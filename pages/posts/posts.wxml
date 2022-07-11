@@ -1,9 +1,9 @@
 <!--pages/posts/posts.wxml-->
 <view>
-    <swiper>
+    <swiper indicator-dots="true" autoplay="true">
         <!-- swiper-item 插槽 -->
-        <swiper-item><image src="/images/post/genshin.jpg" class="swiper-image"></image></swiper-item>
-        <swiper-item><image src="/images/post/curiosity.jpg" class="swiper-image"></image></swiper-item>
-        <swiper-item><image src="/images/post/sls.jpg" class="swiper-image"></image></swiper-item>
+        <swiper-item><image src="/images/post/genshin.jpg" ></image></swiper-item>
+        <swiper-item><image src="/images/post/curiosity.jpg" ></image></swiper-item>
+        <swiper-item><image src="/images/post/sls.jpg" ></image></swiper-item>
     </swiper>
 </view>
