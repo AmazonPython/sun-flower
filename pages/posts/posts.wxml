@@ -1,9 +1,21 @@
 <!--pages/posts/posts.wxml-->
+<!-- flex 容器布局 -->
 <view>
-    <swiper indicator-dots="true" autoplay="true">
+    <swiper indicator-dots="true" autoplay="true" interval="2500">
         <!-- swiper-item 插槽 -->
         <swiper-item><image src="/images/post/genshin.jpg" ></image></swiper-item>
         <swiper-item><image src="/images/post/curiosity.jpg" ></image></swiper-item>
         <swiper-item><image src="/images/post/sls.jpg" ></image></swiper-item>
     </swiper>
+
+    <view>
+        <view>
+            <image></image>
+            <text></text>
+        </view>
+        <text></text>
+        <image></image>
+        <text></text>
+        <view></view>
+    </view>
 </view>
