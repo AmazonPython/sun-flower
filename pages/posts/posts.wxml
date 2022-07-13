@@ -23,9 +23,9 @@
         </text>
 
         <view class="post-like">
-            <image class="post-like-image" src="/images/icon/chat.png"></image>
+            <l-icon class="post-like-image" name="favor" size="30" />
             <text class="post-like-font">22</text>
-            <image class="post-like-image" src="/images/icon/view.png"></image>
+            <l-icon class="post-like-image" name="eye" size="32" />
             <text class="post-like-font">33</text>
         </view>
     </view>
