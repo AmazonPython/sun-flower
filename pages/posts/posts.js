@@ -5,14 +5,17 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        a: "箜篌引"
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        // 创建 + 更新
+        this.setData({
+            a: "《箜篌引》"
+        })
     },
 
     /**
