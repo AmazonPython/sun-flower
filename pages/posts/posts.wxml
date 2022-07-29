@@ -3,26 +3,29 @@
 <view>
     <swiper indicator-dots="true" autoplay="true" interval="2500">
         <!-- swiper-item 插槽 -->
-        <swiper-item><image src="{{ headImgSrc.one }}"></image></swiper-item>
-        <swiper-item><image src="{{ headImgSrc.two }}"></image></swiper-item>
-        <swiper-item><image src="{{ headImgSrc.three }}"></image></swiper-item>
+        <swiper-item><image src="/images/post/genshin.jpg"></image></swiper-item>
+        <swiper-item><image src="/images/post/curiosity.jpg"></image></swiper-item>
+        <swiper-item><image src="/images/post/sls.jpg"></image></swiper-item>
     </swiper>
 
-    <view class="post-container">
-        <view class="post-author-date">
-            <image class="post-author" src="{{ avatar }}"></image>
-            <text class="post-date">{{ postDate }}</text>
-        </view>
+    <!-- 列表渲染 -->
+    <block wx:for="{{ posts }}"  wx:for-item="item">
+        <view class="post-container">
+            <view class="post-author-date">
+                <image class="post-author" src="{{ item.avatar }}"></image>
+                <text class="post-date">{{ item.postDate }}</text>
+            </view>
 
-        <text class="post-title">箜篌引</text>
-        <image class="post-image" src="{{ postImgSrc }}"></image>
-        <text class="post-content">{{ content }}</text>
+            <text class="post-title">{{ item.title }}</text>
+            <image class="post-image" src="{{ item.postImgSrc }}"></image>
+            <text class="post-content">{{ item.content }}</text>
 
-        <view class="post-like">
-            <l-icon class="post-like-image" name="eye" size="32" />
-            <text class="post-like-font">{{ view }}</text>
-            <l-icon class="post-like-image" name="favor" size="30" />
-            <text class="post-like-font">{{ collection }}</text>
+            <view class="post-like">
+                <l-icon class="post-like-image" name="eye" size="32" />
+                <text class="post-like-font">{{ item.view }}</text>
+                <l-icon class="post-like-image" name="favor" size="30" />
+                <text class="post-like-font">{{ item.collection }}</text>
+            </view>
         </view>
-    </view>
+    </block>
 </view>
