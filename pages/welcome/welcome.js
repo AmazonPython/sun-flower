@@ -9,6 +9,19 @@ Page({
     },
 
     /**
+     * 捕捉事件回调函数
+     */
+    onTap: function (params) {
+        // 跳转到子页面，可以返回上一级，子页面嵌套不能大于10
+        // wx.navigateTo({
+        //   url: '/pages/posts/posts',
+        // })
+        wx.redirectTo({
+          url: '/pages/posts/posts',
+        })
+    },
+
+    /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {

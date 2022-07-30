@@ -8,8 +8,8 @@
         <swiper-item><image src="/images/post/sls.jpg"></image></swiper-item>
     </swiper>
 
-    <!-- 列表渲染 -->
-    <block wx:for="{{ posts }}"  wx:for-item="item">
+    <!-- 列表渲染: key 和 for-item 参数可修改，默认为 index 和 item -->
+    <block wx:for="{{ postList }}" wx:key="index" wx:for-item="item">
         <view class="post-container">
             <view class="post-author-date">
                 <image class="post-author" src="{{ item.avatar }}"></image>

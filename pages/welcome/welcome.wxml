@@ -5,5 +5,6 @@
     <l-avatar class="user-avatar" open-data="{{ ['userAvatarUrl'] }}" size="200"/>
     <text class="motto">Welcome! Nova</text>
     <!-- 自定义 button 样式 -->
-    <view class="journey-container"><text class="journey">开启小程序之旅</text></view>
+    <!-- 捕捉事件 -->
+    <view bind:tap="onTap" class="journey-container"><text class="journey">开启小程序之旅</text></view>
 </view>
