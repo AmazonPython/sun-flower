@@ -1,0 +1,20 @@
+<!--pages/post-detail/post-detail.wxml-->
+<view class="container">
+    <image class="" src="" ></image>
+
+    <view>
+        <image class="" src="" ></image>
+        <text></text>
+        <text>发表于</text>
+        <text></text>
+    </view>
+
+    <text></text>
+
+    <view class="">   
+        <image class="" src="" ></image>
+        <image class="" src="" ></image>
+    </view>
+    
+    <text></text>
+</view>
