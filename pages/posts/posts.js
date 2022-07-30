@@ -22,6 +22,22 @@ Page({
     },
 
     /**
+     * 帖子详情页
+     */
+    onGoToDetail() {
+        wx.navigateTo({
+          url: '/pages/posts/posts',
+        })
+    },
+
+    /**
+     * 阻止事件冒泡
+     */
+    onMaxImage(event) {
+        
+    },
+
+    /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
