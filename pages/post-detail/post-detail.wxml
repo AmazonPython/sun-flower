@@ -1,12 +1,12 @@
 <!--pages/post-detail/post-detail.wxml-->
 <view class="container">
-    <image class="" src="/images/post/crossARiver.jpg" ></image>
+    <image class="head-image" src="/images/post/crossARiver.jpg"></image>
 
-    <view>
-        <image class="" src="/images/avatar/4.png" ></image>
-        <text>Nova</text>
-        <text>发表于</text>
-        <text>2002-02-02</text>
+    <view class="author-date">
+        <image class="avatar" src="/images/avatar/4.png"></image>
+        <text class="author">Nova</text>
+        <text class="publish">发表于</text>
+        <text class="date">2002-02-02</text>
     </view>
 
     <text>箜篌引</text>
