@@ -52,10 +52,10 @@ swiper image {
 }
 
 .post-content {
-    font-size: 28rpx;
+    font-size: 32rpx;
     line-height: 40rpx;
     letter-spacing: 2rpx;
-    margin: 0 0 20rpx 20rpx;
+    margin: 0 20rpx 20rpx 30rpx;
 }
 
 .post-like {

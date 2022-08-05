@@ -51,9 +51,20 @@
     justify-content: center;
 }
 
-.circle-img {
+.circle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 660rpx;
+}
+
+.circle image {
     width: 90rpx;
     height: 90rpx;
+}
+
+.share-img {
+    margin-left: 30rpx;
 }
 
 .horizon {
@@ -61,4 +72,12 @@
     height: 1px;
     background-color: #e5e5e5;
     position: absolute;
+    z-index: -99;
+}
+
+.detail {
+    margin: 20rpx 20rpx 0 30rpx;
+    line-height: 40rpx;
+    letter-spacing: 2rpx;
+    font-size: 32rpx;
 }
