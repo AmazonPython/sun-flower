@@ -1,15 +1,15 @@
 <!--pages/post-detail/post-detail.wxml-->
 <view class="container">
-    <image class="head-image" src="/images/post/crossARiver.jpg"></image>
+    <image class="head-image" src="{{ postData.postImgSrc }}"></image>
 
     <view class="author-date">
-        <image class="avatar" src="/images/avatar/4.png"></image>
-        <text class="author">Nova</text>
+        <image class="avatar" src="{{ postData.avatar }}"></image>
+        <text class="author">{{ postData.author }}</text>
         <text class="publish">发表于</text>
-        <text class="date">2002-02-02</text>
+        <text class="date">{{ postData.postDate }}</text>
     </view>
 
-    <text class="title">箜篌引</text>
+    <text class="title">{{ postData.title }}</text>
 
     <view class="tool">   
         <view class="circle">
@@ -19,5 +19,5 @@
         <view class="horizon"></view>
     </view>
 
-    <text class="detail">公無渡河，公竟渡河。墮河而死，將奈公何。\n\n《箜篌引》是一首被翻譯成漢語保存下來的古朝鮮歌謠，是朝鮮文學史現存最早的古代歌謠之一。東漢蔡邕的《琴操·九引》和西晉崔豹的《古今注·音樂》都收有這首歌謠。據記載，古朝鮮人艄公崔子高清晨撐船，見一白髮狂夫披頭散髮，手提酒壺，亂流而渡。其妻在後緊追勸阻，但沒能追上，眼睜睜看着丈夫溺水而亡。其妻悲痛欲絕，彈箜篌「公無渡河」之歌宣洩哀傷，後投河自盡。崔子高回家後將所見所聞講給妻子麗玉。麗玉深受感動，作《箜篌引》。此歌全篇僅16字，但意尤深遠。</text>
+    <text class="detail">{{ postData.content }}</text>
 </view>

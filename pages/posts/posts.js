@@ -24,9 +24,12 @@ Page({
     /**
      * 帖子详情页
      */
-    onGoToDetail() {
+    onGoToDetail(event) {
+        // 事件对象 在页面与页面间数据通信，查询参数
+        const pid = event.currentTarget.dataset.postId;
+
         wx.navigateTo({
-          url: '/pages/post-detail/post-detail',
+          url: '/pages/post-detail/post-detail?pid=' + pid,
         })
     },
 

@@ -10,7 +10,7 @@
 
     <!-- 列表渲染: key 和 for-item 参数可修改，默认为 index 和 item -->
     <block wx:for="{{ postList }}" wx:key="index" wx:for-item="item">
-        <view bind:tap="onGoToDetail" class="post-container">
+        <view data-post-id="{{ item.postId }}" bind:tap="onGoToDetail" class="post-container">
             <view class="post-author-date">
                 <!-- catch:tap 阻止事件冒泡，当父元素点击跳转时，子元素又需点击触发其它任务，使子元素就能单独触发 -->
                 <image catch:tap="onMaxImage" class="post-author" src="{{ item.avatar }}"></image>

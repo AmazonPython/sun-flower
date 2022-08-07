@@ -8,7 +8,7 @@ let postList = [
         postImgSrc: "/images/post/crossARiver.jpg",
         view: "666",
         collection: "33",
-        postId: "3"
+        postId: "0"
     },{
         postDate: "2002-02-02",
         avatar: "/images/avatar/3.png",
@@ -18,7 +18,7 @@ let postList = [
         postImgSrc: "/images/post/angry.jpg",
         view: "444",
         collection: "22",
-        postId: "4"
+        postId: "1"
     }
 ];
 

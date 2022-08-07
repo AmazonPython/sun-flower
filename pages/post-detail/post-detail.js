@@ -1,18 +1,25 @@
 // pages/post-detail/post-detail.js
+// 导入数据文件
+import {postList} from '../../data/data.js';
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        postData:{}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        const postData = postList[options.pid];
+        
+        this.setData({
+            postData
+        })
     },
 
     /**
