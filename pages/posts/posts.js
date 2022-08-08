@@ -16,6 +16,11 @@ Page({
      */
     onLoad(options) {
         // 创建 + 更新
+        wx.setStorageSync('key', true); // 新增缓存数据
+        // 修改缓存数据 wx.setStorageSync('key', false) 
+        // 删除缓存数据 wx.removeStorageSync({ key: 'key' }) 
+        // 清空所有缓存数据 wx.clearStorageSync() 
+       
         this.setData({
             postList
         });
