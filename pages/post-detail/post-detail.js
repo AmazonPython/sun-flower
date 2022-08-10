@@ -8,18 +8,66 @@ Page({
      * 页面的初始数据
      */
     data: {
-        postData:{}
+        postData: {},
+        collected: false,
+        _pid: null,
+        _postsCollected: {},
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        // 获取文章 ID
         const postData = postList[options.pid];
+
+        // 将 ID 储存在变量 data 里，可全局调用
+        this.data._pid = options.pid;
+
+        // 获取缓存
+        const postsCollected = wx.getStorageSync('posts_collected');
         
+
+        if(postsCollected){
+            this.data._postsCollected = postsCollected
+        }
+
+        // 获取缓存
+        let collected = postsCollected[this.data._pid];
+      
+        if(collected === undefined){
+            // 如果undefined 说明文章从来没有被收藏过
+            collected = false
+        }
+
         this.setData({
-            postData
+            postData, collected
         })
+    },
+
+    /**
+     * 收藏页面
+     */
+    async onCollect(event) {
+        // 通过 data 变量获取缓存
+        const postsCollected = this.data._postsCollected;
+        wx.getStorageSync('key');
+
+        // 对缓存里的布尔值取反
+        postsCollected[this.data._pid] = !this.data.collected
+
+        this.setData({
+            // 更新收藏状态
+            collected: !this.data.collected
+        })
+
+        wx.setStorageSync('posts_collected', postsCollected);
+        
+        // 弹窗信息
+        wx.showToast({
+            title: this.data.collected ? '收藏成功' : '取消收藏',
+            duration: 3000,
+        });
     },
 
     /**

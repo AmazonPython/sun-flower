@@ -14,13 +14,20 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad(options) {
+    async onLoad(options) {
         // 创建 + 更新
         wx.setStorageSync('key', true); // 新增缓存数据
         // 修改缓存数据 wx.setStorageSync('key', false) 
         // 删除缓存数据 wx.removeStorageSync({ key: 'key' }) 
         // 清空所有缓存数据 wx.clearStorageSync() 
-       
+
+        // 异步获取缓存
+        /*wx.setStorageSync('flag', 2);
+        const flag = await wx.getStorage({
+            key:'flag',
+        });
+        console.log(flag);*/
+
         this.setData({
             postList
         });
@@ -31,7 +38,7 @@ Page({
      */
     onGoToDetail(event) {
         // 事件对象 在页面与页面间数据通信，查询参数
-        const pid = event.currentTarget.dataset.postId;
+        const pid = event.currentTarget.dataset.postId | event.detail.pid;
 
         wx.navigateTo({
           url: '/pages/post-detail/post-detail?pid=' + pid,
