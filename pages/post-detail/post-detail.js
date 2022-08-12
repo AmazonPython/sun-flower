@@ -42,7 +42,7 @@ Page({
 
         this.setData({
             postData, collected
-        })
+        });
     },
 
     /**
@@ -54,20 +54,42 @@ Page({
         wx.getStorageSync('key');
 
         // 对缓存里的布尔值取反
-        postsCollected[this.data._pid] = !this.data.collected
+        postsCollected[this.data._pid] = !this.data.collected;
 
         this.setData({
             // 更新收藏状态
             collected: !this.data.collected
-        })
+        });
 
         wx.setStorageSync('posts_collected', postsCollected);
-        
+
         // 弹窗信息
         wx.showToast({
             title: this.data.collected ? '收藏成功' : '取消收藏',
             duration: 3000,
         });
+
+        /* 强提示弹窗 async await 写法
+        // 弹窗信息         
+        const result = await wx.showModal({
+            title: '是否收藏文章'
+        });
+
+        if(result.confirm){
+            // 通过 data 变量获取缓存        
+            const postsCollected = this.data._postsCollected;        
+            wx.getStorageSync('key');     
+            
+            // 对缓存里的布尔值取反        
+            postsCollected[this.data._pid] = !this.data.collected       
+            
+            this.setData({            
+                // 更新收藏状态            
+                collected: !this.data.collected        
+            })        
+            wx.setStorageSync('posts_collected', postsCollected);     
+        }  
+        */
     },
 
     /**
