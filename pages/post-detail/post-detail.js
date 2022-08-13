@@ -51,7 +51,7 @@ Page({
     async onShare(event){
         try{
             const result = await wx.showActionSheet({
-                itemList: ['分享到微信','分享到朋友圈','分享到微博'],
+                itemList: ['分享到微信', '分享到朋友圈', '分享到微博'],
             });
             console.log(result);
         } catch(error) {
