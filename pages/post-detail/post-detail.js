@@ -46,6 +46,20 @@ Page({
     },
 
     /**
+     * 内容分享
+     */
+    async onShare(event){
+        try{
+            const result = await wx.showActionSheet({
+                itemList: ['分享到微信','分享到朋友圈','分享到微博'],
+            });
+            console.log(result);
+        } catch(error) {
+            console.log(error);
+        }
+    },
+
+    /**
      * 收藏页面
      */
     async onCollect(event) {
