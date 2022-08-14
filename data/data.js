@@ -8,7 +8,12 @@ let postList = [
         postImgSrc: "/images/post/crossARiver.jpg",
         view: "666",
         collection: "33",
-        postId: "0"
+        postId: "0",
+        music: {
+            url: "https://music.163.com/song/media/outer/url?id=96113.mp3",
+            title: '雪千寻 - 胡伟立',
+            coverImg: 'http://p2.music.126.net/XOpt471iU2RaoxRCiUY7Vg==/65970697678780.jpg?param=130y130'
+        }
     },{
         postDate: "2002-02-02",
         avatar: "/images/avatar/3.png",
@@ -18,7 +23,12 @@ let postList = [
         postImgSrc: "/images/post/angry.jpg",
         view: "444",
         collection: "22",
-        postId: "1"
+        postId: "1",
+        music: {
+            url: 'http://music.163.com/song/media/outer/url?id=167663.mp3',
+            title: '伴虎 - 许嵩',
+            coverImg: 'http://p1.music.126.net/ifjKrYPuGzRHlbVDNScQfA==/109951166118946328.jpg?param=130y130'
+        }
     }
 ];
 

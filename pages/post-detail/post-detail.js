@@ -12,6 +12,7 @@ Page({
         collected: false,
         _pid: null,
         _postsCollected: {},
+        _mgr: null
     },
 
     /**
@@ -46,9 +47,19 @@ Page({
     },
 
     /**
+     * 背景音乐
+     */
+    onMusic(event) {
+        const mgr = wx.getBackgroundAudioManager();
+        mgr.src = postList[0].music.url;
+        mgr.title = postList[0].music.title;
+        mgr.img = postList[0].music.coverImg;
+    },
+
+    /**
      * 内容分享
      */
-    async onShare(event){
+    async onShare(event) {
         try{
             const result = await wx.showActionSheet({
                 itemList: ['分享到微信', '分享到朋友圈', '分享到微博'],

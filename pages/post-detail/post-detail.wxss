@@ -81,3 +81,12 @@
     letter-spacing: 2rpx;
     font-size: 32rpx;
 }
+
+.audio{
+    width: 102rpx;
+    height: 110rpx;
+    position: absolute;
+    left: 50%;
+    top: 150rpx;
+    transform: translate(-50%, -50%);
+}

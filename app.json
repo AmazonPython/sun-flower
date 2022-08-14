@@ -8,5 +8,6 @@
         "navigationBarBackgroundColor": "#C22A1E"
     },
     "style": "v2",
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "requiredBackgroundModes": ["audio", "location"]
 }
