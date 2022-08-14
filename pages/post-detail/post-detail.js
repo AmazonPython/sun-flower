@@ -12,7 +12,8 @@ Page({
         collected: false,
         _pid: null,
         _postsCollected: {},
-        _mgr: null
+        _mgr: null,
+        isPlaying: false
     },
 
     /**
@@ -51,9 +52,14 @@ Page({
      */
     onMusic(event) {
         const mgr = wx.getBackgroundAudioManager();
-        mgr.src = postList[0].music.url;
-        mgr.title = postList[0].music.title;
-        mgr.img = postList[0].music.coverImg;
+        
+        mgr.src = postList[this.data._pid].music.url;
+        mgr.title = postList[this.data._pid].music.title;
+        mgr.img = postList[this.data._pid].music.coverImg;
+
+        this.setData({
+            isPlaying: true
+        })
     },
 
     /**

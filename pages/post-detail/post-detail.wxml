@@ -1,7 +1,7 @@
 <!--pages/post-detail/post-detail.wxml-->
 <view class="container">
     <image class="head-image" src="{{ postData.postImgSrc }}"></image>
-    <image bind:tap="onMusic" class="audio" src="/images/music/music-start.png"></image>
+    <image bind:tap="onMusic" class="audio" src="{{ isPlaying ? '/images/music/music-stop.png' : '/images/music/music-start.png' }}"></image>
 
     <view class="author-date">
         <image class="avatar" src="{{ postData.avatar }}"></image>
