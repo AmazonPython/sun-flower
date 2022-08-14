@@ -51,15 +51,29 @@ Page({
      * 背景音乐
      */
     onMusic(event) {
+        // 初始化音乐播放器
         const mgr = wx.getBackgroundAudioManager();
-        
-        mgr.src = postList[this.data._pid].music.url;
-        mgr.title = postList[this.data._pid].music.title;
-        mgr.img = postList[this.data._pid].music.coverImg;
 
-        this.setData({
-            isPlaying: true
-        })
+        // 动态访问属性
+        const music = postList[this.data._pid].music;
+
+        // 对缓存里的布尔值取反
+        let isPlaying = !this.data.isPlaying;
+
+        // 点击播放
+        if(isPlaying) {
+            // 调用所需参数
+            mgr.src = music.url;
+            mgr.title = music.title;
+            mgr.coverImgUrl = music.coverImg;
+        } else {
+            // 暂停音乐
+            mgr.pause();
+        }
+
+        this.setData({ 
+            isPlaying 
+        });
     },
 
     /**
