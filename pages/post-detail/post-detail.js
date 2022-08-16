@@ -2,6 +2,9 @@
 // 导入数据文件
 import {postList} from '../../data/data.js';
 
+// 定义常量，用于更改音乐图标
+const app = getApp();
+
 Page({
 
     /**
@@ -43,7 +46,9 @@ Page({
         }
 
         this.setData({
-            postData, collected
+            postData, 
+            collected,
+            isPlaying: this.currentMusicIsPlaying()
         });
     },
 
@@ -66,14 +71,28 @@ Page({
             mgr.src = music.url;
             mgr.title = music.title;
             mgr.coverImgUrl = music.coverImg;
+            app.gIsPlayingMusic = true;
+            app.gIsPlayingPostId = this.data._pid;
         } else {
             // 暂停音乐
             mgr.pause();
+            app.gIsPlayingMusic = false;
+            app.gIsPlayingPostId = -1;
         }
 
         this.setData({ 
             isPlaying 
         });
+    },
+
+    /**
+     * 判断当前音乐是否为当前文章所属音乐
+     */
+    currentMusicIsPlaying() {
+        if(app.gIsPlayingMusic && app.gIsPlayingPostId === this.data._pid) {
+            return true
+        }
+        return false
     },
 
     /**
