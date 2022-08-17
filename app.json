@@ -2,12 +2,28 @@
     "pages": [
         "pages/welcome/welcome",
         "pages/posts/posts",
-        "pages/post-detail/post-detail"
+        "pages/post-detail/post-detail",
+        "pages/movies/movies"
     ],
     "window": {
         "navigationBarBackgroundColor": "#C22A1E"
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json",
-    "requiredBackgroundModes": ["audio", "location"]
+    "requiredBackgroundModes": [
+        "audio",
+        "location"
+    ],
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/posts/posts",
+                "text": "阅读"
+            },
+            {
+                "pagePath": "pages/movies/movies",
+                "text": "电影"
+            }
+        ]
+    }
 }
