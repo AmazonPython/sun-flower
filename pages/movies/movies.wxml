@@ -1,2 +1,4 @@
 <!--pages/movies/movies.wxml-->
 <text>pages/movies/movies.wxml</text>
+
+<!-- 自定义组件 template 从服务器加载数据 -->

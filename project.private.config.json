@@ -18,6 +18,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/movies/movies",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }
