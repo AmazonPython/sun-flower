@@ -8,6 +8,8 @@
         <swiper-item><image data-post-id="2" bind:tap="onGoToDetail" src="/images/post/sls.jpg"></image></swiper-item>
     </swiper>
 
+    <post text="777" />
+    
     <!-- 列表渲染: key 和 for-item 参数可修改，默认为 index 和 item -->
     <block wx:for="{{ postList }}" wx:key="index" wx:for-item="item">
         <view data-post-id="{{ item.postId }}" bind:tap="onGoToDetail" class="post-container">
