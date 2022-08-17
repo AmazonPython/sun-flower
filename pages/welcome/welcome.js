@@ -13,11 +13,15 @@ Page({
      */
     onTap(params) {
         // 跳转到子页面，可以返回上一级，子页面嵌套不能大于10
-        // wx.navigateTo({
-        //   url: '/pages/posts/posts',
-        // })
-        wx.redirectTo({
+        /*wx.navigateTo({
+            url: '/pages/posts/posts',
+        })*/
+        /*wx.redirectTo({
           url: '/pages/posts/posts',
+        })*/
+        // 跳转到带有选项卡 tab Bar 的页面需要使用 switchTab
+        wx.switchTab({
+            url: '/pages/posts/posts',
         })
     },
 

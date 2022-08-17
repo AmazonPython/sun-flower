@@ -15,14 +15,20 @@
         "location"
     ],
     "tabBar": {
+        "color": "333333",
+        "selectedColor": "999999",
         "list": [
             {
+                "text": "阅读",
                 "pagePath": "pages/posts/posts",
-                "text": "阅读"
+                "iconPath": "/images/tab/post.png",
+                "selectedIconPath": "/images/tab/post@highlight.png"
             },
             {
+                "text": "电影",
                 "pagePath": "pages/movies/movies",
-                "text": "电影"
+                "iconPath": "/images/tab/movie.png",
+                "selectedIconPath": "/images/tab/movie@highlight.png"
             }
         ]
     }
