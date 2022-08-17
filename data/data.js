@@ -29,6 +29,21 @@ let postList = [
             title: '伴虎 - 许嵩',
             coverImg: 'http://p1.music.126.net/ifjKrYPuGzRHlbVDNScQfA==/109951166118946328.jpg?param=130y130'
         }
+    },{
+        postDate: "2012-12-31",
+        avatar: "/images/avatar/2.png",
+        author: "Tolstoy",
+        title: "锦瑟",
+        content: "锦瑟无端五十弦，一弦一柱思华年。\n庄生晓梦迷蝴蝶，望帝春心托杜鹃。\n沧海月明珠有泪，蓝田日暖玉生烟。\n此情可待成追忆，只是当时已惘然。\n\n这首诗历来注释不一，莫衷一是。或以为是悼亡之作，或以为是爱国之篇或以为是自比文才之论，或以为是抒写思念待儿锦瑟。但以为是悼亡诗者为最多。有人认为，开首以瑟弦五十折半为二十五，隐指亡妇华年二十五岁。这话未免有嫌牵强。但是，首联哀悼早逝却是真实。颔联以庄子亡妻鼓盆而歌和期效望帝化成子规而啼血，间接地描写了人生的悲欢离合。颈联以鲛人泣珠和良玉生烟的典故，隐约地描摹了世间风情迷离恍惚，可望而不可置。最后抒写生前情爱漫不经心，死后追忆已经惘然的难以排遣的情绪。",
+        postImgSrc: "/images/post/sls.jpg",
+        view: "998",
+        collection: "112",
+        postId: "2",
+        music: {
+            url: 'http://music.163.com/song/media/outer/url?id=1356350562.mp3',
+            title: '这一生关于你的风景 - 枯木逢春',
+            coverImg: 'http://p1.music.126.net/415A5Xt3bUegx4vyiY8dNQ==/109951164821961505.jpg?param=130y130'
+        }
     }
 ];
 

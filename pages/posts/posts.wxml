@@ -3,9 +3,9 @@
 <view>
     <swiper indicator-dots="true" autoplay="true" interval="2500">
         <!-- swiper-item 插槽 -->
-        <swiper-item><image src="/images/post/genshin.jpg"></image></swiper-item>
-        <swiper-item><image src="/images/post/curiosity.jpg"></image></swiper-item>
-        <swiper-item><image src="/images/post/sls.jpg"></image></swiper-item>
+        <swiper-item><image data-post-id="0" bind:tap="onGoToDetail" src="/images/post/genshin.jpg"></image></swiper-item>
+        <swiper-item><image data-post-id="1" bind:tap="onGoToDetail" src="/images/post/curiosity.jpg"></image></swiper-item>
+        <swiper-item><image data-post-id="2" bind:tap="onGoToDetail" src="/images/post/sls.jpg"></image></swiper-item>
     </swiper>
 
     <!-- 列表渲染: key 和 for-item 参数可修改，默认为 index 和 item -->
