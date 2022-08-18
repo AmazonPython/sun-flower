@@ -1,2 +1,18 @@
-<!--components/post/index.wxml-->
-{{ text }}
+<!-- components/post/index.wxml -->
+<view data-post-id="{{ res.postId }}" bind:tap="onGoToDetail" class="post-container">
+    <view class="post-author-date">
+        <!-- catch:tap 阻止事件冒泡，当父元素点击跳转时，子元素又需点击触发其它任务，使子元素就能单独触发 -->
+        <image catch:tap="onMaxImage" class="post-author" src="{{ res.avatar }}"></image>
+        <text class="post-date">{{ res.postDate }}</text>
+    </view>
+
+    <text class="post-title">{{ res.title }}</text>
+    <image class="post-image" src="{{ res.postImgSrc }}"></image>
+    <text class="post-content">{{ res.content }}</text>
+    <view class="post-like">
+        <l-icon class="post-like-image" name="eye" size="32" />
+        <text class="post-like-font">{{ res.view }}</text>
+        <l-icon class="post-like-image" name="favor" size="30" />
+            <text class="post-like-font">{{ res.collection }}</text>
+    </view>
+</view>

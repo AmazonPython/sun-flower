@@ -8,27 +8,9 @@
         <swiper-item><image data-post-id="2" bind:tap="onGoToDetail" src="/images/post/sls.jpg"></image></swiper-item>
     </swiper>
 
-    <post text="777" />
-    
     <!-- 列表渲染: key 和 for-item 参数可修改，默认为 index 和 item -->
     <block wx:for="{{ postList }}" wx:key="index" wx:for-item="item">
-        <view data-post-id="{{ item.postId }}" bind:tap="onGoToDetail" class="post-container">
-            <view class="post-author-date">
-                <!-- catch:tap 阻止事件冒泡，当父元素点击跳转时，子元素又需点击触发其它任务，使子元素就能单独触发 -->
-                <image catch:tap="onMaxImage" class="post-author" src="{{ item.avatar }}"></image>
-                <text class="post-date">{{ item.postDate }}</text>
-            </view>
-
-            <text class="post-title">{{ item.title }}</text>
-            <image class="post-image" src="{{ item.postImgSrc }}"></image>
-            <text class="post-content">{{ item.content }}</text>
-
-            <view class="post-like">
-                <l-icon class="post-like-image" name="eye" size="32" />
-                <text class="post-like-font">{{ item.view }}</text>
-                <l-icon class="post-like-image" name="favor" size="30" />
-                <text class="post-like-font">{{ item.collection }}</text>
-            </view>
-        </view>
+        <!-- 引入组件 -->
+        <post res="{{ item }}" />
     </block>
 </view>
