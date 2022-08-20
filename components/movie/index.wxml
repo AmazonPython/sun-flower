@@ -1,2 +1,5 @@
 <!--components/movie/index.wxml-->
-这是一部电影
+<view class="container">
+    <image class="poster" src="/images/Penguin&Cat.jpg"></image>
+    <text class="title">夏洛的网</text>
+</view>
