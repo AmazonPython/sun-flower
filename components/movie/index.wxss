@@ -18,3 +18,14 @@
     overflow: hidden;
     word-break: break-all;
 }
+
+.rate-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.score {
+    margin-left: 10rpx;
+    font-size: 28rpx;
+}

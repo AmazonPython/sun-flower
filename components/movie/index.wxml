@@ -2,4 +2,8 @@
 <view class="container">
     <image class="poster" src="/images/Penguin&Cat.jpg"></image>
     <text class="title">夏洛的网</text>
+    <view class="rate-container">
+        <l-rate disabled="{{ true }}" size="22" score="4.2" />
+        <text class="score">4.2</text>
+    </view>
 </view>
