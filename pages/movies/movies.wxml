@@ -1,3 +1,5 @@
 <!--pages/movies/movies.wxml-->
 <!-- 自定义组件 template 从服务器加载数据 -->
-<movie-list />
+<movie-list movie-class="movie-list" />
+<movie-list movie-class="movie-list" />
+<movie-list movie-class="movie-list" />
