@@ -7,7 +7,7 @@ Component({
      */
     externalClasses:['movie-class'],
     properties: {
-        
+        title: String
     },
 
     /**

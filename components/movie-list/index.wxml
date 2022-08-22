@@ -1,7 +1,7 @@
 <!--components/movie-list/index.wxml-->
 <view class="container movie-class">
     <view class="title-container">
-        <text class="">正在热映</text>
+        <text class="">{{ title }}</text>
         <text class="more-text">更多 ></text>
     </view>
     <view class="movie-container">
