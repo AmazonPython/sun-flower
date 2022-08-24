@@ -5,7 +5,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        inTheaters:[]
+        inTheaters: [],
+        comingSoon: [],
+        filmClassics: []
     },
 
     /**
@@ -21,7 +23,27 @@ Page({
                     inTheaters: res.data.subjects
                 })
             }
-        })
+        });
+        wx.request({
+            // API 地址
+            url: 'http://t.talelin.com/v2/movie/coming_soon?start=1&count=3',
+            success:(res) => {
+                console.log(res);
+                this.setData({
+                    comingSoon: res.data.subjects
+                })
+            }
+        });
+        wx.request({
+            // API 地址
+            url: 'http://t.talelin.com/v2/movie/top250?start=6&count=3',
+            success:(res) => {
+                console.log(res);
+                this.setData({
+                    filmClassics: res.data.subjects
+                })
+            }
+        });
     },
 
     /**
