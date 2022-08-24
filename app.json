@@ -4,7 +4,8 @@
         "pages/posts/posts",
         "pages/post-detail/post-detail",
         "pages/movies/movies",
-        "components/movie"
+        "components/movie",
+        "pages/more-movie/more-movie"
     ],
     "window": {
         "navigationBarBackgroundColor": "#C22A1E"

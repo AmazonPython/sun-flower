@@ -25,6 +25,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/more-movie/more-movie",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }
