@@ -1,9 +1,9 @@
 <!--components/movie/index.wxml-->
 <view class="container">
-    <image class="poster" src="/images/Penguin&Cat.jpg"></image>
+    <image class="poster" src="{{ movie.images.large }}"></image>
     <text class="title">{{ movie.title }}</text>
     <view class="rate-container">
-        <l-rate disabled="{{ true }}" size="22" score="4.2" />
+        <l-rate disabled="{{ true }}" size="22" score="{{ movie.rating.stars / 10 }}" />
         <text class="score">{{ movie.rating.average }}</text>
     </view>
 </view>

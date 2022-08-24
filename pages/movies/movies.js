@@ -14,7 +14,7 @@ Page({
     onLoad(options) {
         wx.request({
             // API 地址
-            url: 'http://t.talelin.com/v2/movie/in_theaters?start=0&count=3',
+            url: 'http://t.talelin.com/v2/movie/in_theaters?start=5&count=3',
             success:(res) => {
                 console.log(res);
                 this.setData({
