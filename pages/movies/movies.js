@@ -1,6 +1,7 @@
 // pages/movies/movies.js
-Page({
+const app = getApp();
 
+Page({
     /**
      * 页面的初始数据
      */
@@ -16,7 +17,7 @@ Page({
     onLoad(options) {
         wx.request({
             // API 地址
-            url: 'http://t.talelin.com/v2/movie/in_theaters?start=5&count=3',
+            url: app.gBaseUrl + 'in_theaters?start=5&count=3',
             success:(res) => {
                 console.log(res);
                 this.setData({
@@ -25,8 +26,7 @@ Page({
             }
         });
         wx.request({
-            // API 地址
-            url: 'http://t.talelin.com/v2/movie/coming_soon?start=1&count=3',
+            url: app.gBaseUrl + 'coming_soon?start=1&count=3',
             success:(res) => {
                 console.log(res);
                 this.setData({
@@ -35,8 +35,7 @@ Page({
             }
         });
         wx.request({
-            // API 地址
-            url: 'http://t.talelin.com/v2/movie/top250?start=6&count=3',
+            url: app.gBaseUrl + 'top250?start=6&count=3',
             success:(res) => {
                 console.log(res);
                 this.setData({
