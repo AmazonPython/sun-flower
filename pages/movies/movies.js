@@ -17,27 +17,34 @@ Page({
     onLoad(options) {
         wx.request({
             // API 地址
-            url: app.gBaseUrl + 'in_theaters?start=5&count=3',
+            url: app.gBaseUrl + 'in_theaters',
+            data: {
+                // 接口参数
+                start: 5, count: 3
+            },
             success:(res) => {
-                console.log(res);
                 this.setData({
                     inTheaters: res.data.subjects
                 })
             }
         });
         wx.request({
-            url: app.gBaseUrl + 'coming_soon?start=1&count=3',
+            url: app.gBaseUrl + 'coming_soon',
+            data: {
+                start: 1, count: 3
+            },
             success:(res) => {
-                console.log(res);
                 this.setData({
                     comingSoon: res.data.subjects
                 })
             }
         });
         wx.request({
-            url: app.gBaseUrl + 'top250?start=6&count=3',
+            url: app.gBaseUrl + 'top250',
+            data: {
+                start: 6, count: 3
+            },
             success:(res) => {
-                console.log(res);
                 this.setData({
                     filmClassics: res.data.subjects
                 })
