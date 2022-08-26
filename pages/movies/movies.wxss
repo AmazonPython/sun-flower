@@ -3,6 +3,10 @@
     margin-bottom: 28rpx;
 }
 
+.movie-search-bar {
+    height: 90rpx !important;
+}
+
 page {
     background-color: #f2f2f2;
 }
