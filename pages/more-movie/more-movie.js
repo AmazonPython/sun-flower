@@ -1,18 +1,32 @@
 // pages/more-movie/more-movie.js
+const app = getApp();
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        movies: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        wx.request({
+            // API 地址
+            url: app.gBaseUrl + 'in_theaters',
+            data: {
+                // 接口参数
+                start: 0, count: 20
+            },
+            success:(res) => {
+                this.setData({
+                    movies: res.data.subjects
+                })
+            }
+        });
     },
 
     /**

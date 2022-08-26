@@ -1,2 +1,6 @@
 <!--pages/more-movie/more-movie.wxml-->
-<movie />
+<view class="container">
+    <block wx:for="{{ movies }}" wx:key="index">
+        <movie movie="{{ item }}" />
+    </block>
+</view>
