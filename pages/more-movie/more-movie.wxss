@@ -3,5 +3,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 30rpx 0 0 30rpx;
+    padding: 30rpx 30rpx 0 30rpx;
+    justify-content: space-between;
+}
+
+.movie {
+    margin-bottom: 30rpx;
 }

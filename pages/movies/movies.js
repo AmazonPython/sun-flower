@@ -53,6 +53,17 @@ Page({
     },
 
     /**
+     * 电影页跳转
+     */
+    onGoToMore(event) {
+        const type = event.currentTarget.dataset.type;
+
+        wx.navigateTo({
+          url: '/pages/more-movie/more-movie?type=' + type,
+        })
+    },
+
+    /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady() {

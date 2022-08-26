@@ -1,5 +1,5 @@
 <!--pages/movies/movies.wxml-->
 <!-- 自定义组件 template 从服务器加载数据 -->
-<movie-list movies="{{ inTheaters }}" title="正在热映" movie-class="movie-list" />
-<movie-list movies="{{ comingSoon }}" title="即将上映" movie-class="movie-list" />
-<movie-list movies="{{ filmClassics }}" title="影视经典" movie-class="movie-list" />
+<movie-list data-type="in_theaters" bind:tap="onGoToMore" movies="{{ inTheaters }}" title="正在热映" movie-class="movie-list" />
+<movie-list data-type="coming_soon" bind:tap="onGoToMore" movies="{{ comingSoon }}" title="即将上映" movie-class="movie-list" />
+<movie-list data-type="top250" bind:tap="onGoToMore" movies="{{ filmClassics }}" title="影视经典" movie-class="movie-list" />

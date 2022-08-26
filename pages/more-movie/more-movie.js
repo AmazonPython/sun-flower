@@ -14,12 +14,14 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        const type = options.type;
+
         wx.request({
             // API 地址
-            url: app.gBaseUrl + 'in_theaters',
+            url: app.gBaseUrl + type,
             data: {
                 // 接口参数
-                start: 0, count: 20
+                start: 0, count: 18
             },
             success:(res) => {
                 this.setData({
