@@ -12,6 +12,9 @@
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "movie": "/components/movie/index"
+    },
     "requiredBackgroundModes": [
         "audio",
         "location"

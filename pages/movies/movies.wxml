@@ -1,7 +1,15 @@
 <!--pages/movies/movies.wxml-->
 <!-- 自定义组件 template 从服务器加载数据 -->
-<l-search-bar bind:linconfirm="onConfirm" l-class="movie-search-bar" placeholder="点击搜索" show-cancel="{{ false }}" />
+<l-search-bar bind:linconfirm="onConfirm" bind:lincancel="onSearchCancel" l-class="movie-search-bar" placeholder="点击搜索" />
 
-<movie-list data-type="in_theaters" bind:tap="onGoToMore" movies="{{ inTheaters }}" title="正在热映" movie-class="movie-list" />
-<movie-list data-type="coming_soon" bind:tap="onGoToMore" movies="{{ comingSoon }}" title="即将上映" movie-class="movie-list" />
-<movie-list data-type="top250" bind:tap="onGoToMore" movies="{{ filmClassics }}" title="影视经典" movie-class="movie-list" />
+<view wx:if="{{ !searchResult }}">
+    <movie-list data-type="in_theaters" bind:tap="onGoToMore" movies="{{ inTheaters }}" title="正在热映" movie-class="movie-list" />
+    <movie-list data-type="coming_soon" bind:tap="onGoToMore" movies="{{ comingSoon }}" title="即将上映" movie-class="movie-list" />
+    <movie-list data-type="top250" bind:tap="onGoToMore" movies="{{ filmClassics }}" title="影视经典" movie-class="movie-list" />
+</view>
+
+<view class="search-container" wx:else>
+    <block wx:for="{{ searchData }}" wx:key="index">
+        <movie class="movie" movie="{{ item }}" />
+    </block>
+</view>

@@ -8,7 +8,9 @@ Page({
     data: {
         inTheaters: [],
         comingSoon: [],
-        filmClassics: []
+        filmClassics: [],
+        searchResult: false,
+        searchData: []
     },
 
     /**
@@ -67,12 +69,29 @@ Page({
      * 搜索栏点击查询事件
      */
     onConfirm(event) {
-        console.log(event);
+        this.setData({
+            searchResult: true
+        });
+
         wx.request({
-          url: app.gBaseUrl + 'search',
-          data: {
-              q: event.detail.value
-          }
+            url: app.gBaseUrl + 'search',
+            data: {
+                q: event.detail.value
+            },
+            success:(res) => {
+                this.setData({
+                    searchData: res.data.subjects
+                })
+            }
+        })
+    },
+
+    /**
+     * 搜索取消事件
+     */
+    onSearchCancel(event) {
+        this.setData({
+            searchResult: false
         })
     },
 
