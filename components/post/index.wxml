@@ -1,5 +1,5 @@
 <!-- components/post/index.wxml -->
-<view data-post-id="{{ res.postId }}" bind:tap="onGoToDetail" class="post-container">
+<view data-post-id="{{ res.postId }}" bind:tap="onTap" class="post-container">
     <view class="post-author-date">
         <!-- catch:tap 阻止事件冒泡，当父元素点击跳转时，子元素又需点击触发其它任务，使子元素就能单独触发 -->
         <image catch:tap="onMaxImage" class="post-author" src="{{ res.avatar }}"></image>

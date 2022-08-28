@@ -9,8 +9,8 @@
     </swiper>
 
     <!-- 列表渲染: key 和 for-item 参数可修改，默认为 index 和 item -->
-    <block wx:for="{{ postList }}" wx:key="index" wx:for-item="item">
+    <block wx:for="{{ postList }}" wx:key="index" wx:for-item="item" wx:for-index="index">
         <!-- 引入组件 -->
-        <post res="{{ item }}" />
+        <post bind:posttap = "onGoToDetail" res="{{item}}"/>
     </block>
 </view>
