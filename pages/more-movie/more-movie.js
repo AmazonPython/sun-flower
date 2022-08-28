@@ -7,7 +7,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        movies: []
+        movies: [],
+        _type: ''
     },
 
     /**
@@ -15,13 +16,15 @@ Page({
      */
     onLoad(options) {
         const type = options.type;
+        // type 是局部变量，在 onReachBottom 函数无法直接调用
+        this._type = type;
 
         wx.request({
             // API 地址
             url: app.gBaseUrl + type,
             data: {
                 // 接口参数
-                start: 0, count: 18
+                start: 0, count: 12
             },
             success:(res) => {
                 this.setData({
@@ -70,7 +73,21 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-
+        // 加载提示
+        wx.showNavigationBarLoading();
+        wx.request({
+            url: app.gBaseUrl + this._type,
+            data: {
+                start: this.data.movies.length, count: 12
+            },
+            success:(res) => {
+                this.setData({
+                    movies: this.data.movies.concat(res.data.subjects)
+                });
+                // 终止加载提示
+                wx.hideNavigationBarLoading()
+            }
+        });
     },
 
     /**
