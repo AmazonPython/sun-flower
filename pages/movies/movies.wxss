@@ -7,6 +7,20 @@
     height: 90rpx !important;
 }
 
+.search-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30rpx 30rpx 0 30rpx;
+    justify-content: space-between;
+}
+
+/* 用伪类修复 flex 布局内容不够一整行时，隔太开的问题 */
+.search-container::after {
+    content: '';
+    width: 200rpx;
+}
+
 page {
     background-color: #f2f2f2;
 }
