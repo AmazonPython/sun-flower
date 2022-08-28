@@ -4,7 +4,7 @@
         "pages/posts/posts",
         "pages/post-detail/post-detail",
         "pages/movies/movies",
-        "pages/movies-detail/movies-detail",
+        "pages/movie-detail/movie-detail",
         "pages/more-movie/more-movie"
     ],
     "window": {
