@@ -15,7 +15,7 @@
     justify-content: space-between;
 }
 
-/* 用伪类修复 flex 布局内容不够一整行时，隔太开的问题 */
+/* 用伪元素修复 flex 布局的内容不够一整行时，元素之间隔太开的问题 */
 .search-container::after {
     content: '';
     width: 200rpx;
