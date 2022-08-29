@@ -21,7 +21,8 @@ Component({
      */
     methods: {
         onTap(event){
-            const pid = this.properties.res.postId
+            // 在 properties 中可以直接获得参数，不需要在自定义组件中进行数据绑定 data-post-id="{{res.postId}}" 
+            const pid = this.properties.res.postId;
             this.triggerEvent('posttap', {
                 pid
             })
