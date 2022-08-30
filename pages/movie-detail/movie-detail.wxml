@@ -3,13 +3,13 @@
     <image class="head-img" src="{{ movie.images.large }}"></image>
     <view class="head-img-hover">
         <text class="main-title">{{ movie.title }}</text>
-        <text class="sub-title">{{ movie.subtitle }}</text>
+        <text class="sub-title">{{ movie.countries[0] + ' ' + movie.year }}</text>
         <view class="like">
-            <text class="highlight-font">{{ movie.wishCount }}</text>
+            <text class="highlight-font">{{ movie.wish_count }}</text>
             <text class="plain-font">人喜欢</text>
-            <text class="highlight-font">{{ movie.commentsCount }}</text>
+            <text class="highlight-font">{{ movie.comments_count }}</text>
             <text class="plain-font">条评论</text>
         </view>
-        <image class="movie-img" src="{{ movie.image.large }}"></image>
+        <image bind:tap="onViewPost" class="movie-img" src="{{ movie.images.large }}"></image>
     </view>
 </view>

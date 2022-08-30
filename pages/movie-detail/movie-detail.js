@@ -23,7 +23,17 @@ Page({
                 this.setData({
                     movie: res.data
                 })
+                //this.processMovieData(res.data)
             }
+        })
+    },
+
+    /**
+     * 图片放大
+     */
+    onViewPost(event) {
+        wx.previewImage({
+            urls: [this.data.movie.images.large],
         })
     },
 
