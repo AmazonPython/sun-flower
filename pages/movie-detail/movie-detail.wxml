@@ -1,4 +1,15 @@
 <!--pages/movie-detail/movie-detail.wxml-->
 <view class="container">
-    <text></text>
+    <image class="head-img" src="{{ movie.images.large }}"></image>
+    <view class="head-img-hover">
+        <text class="main-title">{{ movie.title }}</text>
+        <text class="sub-title">{{ movie.subtitle }}</text>
+        <view class="like">
+            <text class="highlight-font">{{ movie.wishCount }}</text>
+            <text class="plain-font">人喜欢</text>
+            <text class="highlight-font">{{ movie.commentsCount }}</text>
+            <text class="plain-font">条评论</text>
+        </view>
+        <image class="movie-img" src="{{ movie.image.large }}"></image>
+    </view>
 </view>
