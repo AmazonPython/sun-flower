@@ -1,5 +1,7 @@
 // pages/movie-detail/movie-detail.js
-const app = getApp()
+import {convertToCastString, convertToCastInfos} from '../../utils/util.js';
+
+const app = getApp();
 
 Page({
 
@@ -19,11 +21,7 @@ Page({
             // API 地址
             url: app.gBaseUrl + 'subject/' + mid,
             success:(res) => {
-                console.log(res.data)
-                this.setData({
-                    movie: res.data
-                })
-                //this.processMovieData(res.data)
+                this.processMovieData(res.data)
             }
         })
     },
@@ -33,7 +31,29 @@ Page({
      */
     onViewPost(event) {
         wx.previewImage({
-            urls: [this.data.movie.images.large],
+            urls: [this.data.movie.image],
+        })
+    },
+
+    /**
+     * 数据预处理
+     */
+    processMovieData(movie){
+        const data = {};
+        data.directors = convertToCastString(movie.directors);
+        data.casts = convertToCastString(movie.casts);
+        data.image = movie.images.large;
+        data.title = movie.title;
+        data.subtitle = movie.countries[0] + ' ' + movie.year;
+        data.wishCount = movie.wish_count;
+        data.commentsCount = movie.comments_count;
+        data.rating = movie.rating.stars / 10;
+        data.average = movie.rating.average;
+        data.genres = movie.genres.join('、');
+        data.summary = movie.summary;
+        data.castsInfo = convertToCastInfos(movie.casts);
+        this.setData({
+            movie: data
         })
     },
 
