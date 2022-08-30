@@ -82,7 +82,7 @@
     font-size: 32rpx;
 }
 
-.audio{
+.audio {
     width: 102rpx;
     height: 110rpx;
     position: absolute;
