@@ -1,6 +1,6 @@
 <view class="container">
     <image mode="aspectFill" class="head-img" src="{{ movie.image }}"></image>
-    <view  class="head-img-hover">
+    <view class="head-img-hover">
         <text class="main-title">{{ movie.title }}</text>
         <text class="sub-title">{{ movie.subtitle }}</text>
         <view class="like">
@@ -45,16 +45,16 @@
     <view class="hr"></view>
 
     <view class="casts">
-        <text class="cast-font"> 影人</text>
-        <scroll-view  enable-flex scroll-x class="casts-container">
+        <text class="cast-font">影人</text>
+        <scroll-view enable-flex scroll-x class="casts-container">
             <block wx:for="{{ movie.castsInfo }}" wx:key="index">
                 <view class="cast-container">
                     <image class="cast-img" src="{{ item.img }}"></image>
-                    <text>{{item.name}}</text>
+                    <text>{{ item.name }}</text>
                 </view>
                 <view class="cast-container">
                     <image class="cast-img" src="{{ item.img }}"></image>
-                    <text>{{item.name}}</text>
+                    <text>{{ item.name }}</text>
                 </view>
                 <view class="cast-container">
                     <image class="cast-img" src="{{ item.img }}"></image>
