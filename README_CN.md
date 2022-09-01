@@ -29,6 +29,7 @@
 ```npm run build```
 
 使用 Lin-UI 务必勾选Es6 转 ES5和使用 npm 模块选项。
+
 [![WARNING](https://cdn.talelin.com/%E6%9C%AC%E5%9C%B0%E8%AE%BE%E7%BD%AE.png)](https://cdn.talelin.com/%E6%9C%AC%E5%9C%B0%E8%AE%BE%E7%BD%AE.png)
 
 ## 贡献指南

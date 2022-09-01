@@ -31,6 +31,7 @@ Clone this project and go to the project root directory. Perform the following o
 ```npm run build```
 
 When using Lin UI, be sure to check the options of ES6 to Es5 and NPM module.
+
 [![WARNING](https://cdn.talelin.com/%E6%9C%AC%E5%9C%B0%E8%AE%BE%E7%BD%AE.png)](https://cdn.talelin.com/%E6%9C%AC%E5%9C%B0%E8%AE%BE%E7%BD%AE.png) 
 
 ## Contributing guidelines
