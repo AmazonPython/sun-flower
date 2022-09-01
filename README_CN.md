@@ -14,15 +14,13 @@
     </a>
 </p>
 
-* [中文版](./README_CN.md)
+* [English version](./README.md)
 
-## About
-Sunflower is a WeChat mini-program project. Part of the code is built based on the [Lin-UI](https://github.com/TaleLin/lin-ui) framework.
+## 关于
+向日葵是一个微信小程序项目。部分代码是基于 [Lin-UI](https://github.com/TaleLin/lin-ui) 框架构建的。这是一个文学和电影欣赏类的项目，电影数据爬取自豆瓣榜单，文学作品是无版权作品。
 
-This is a literary and film appreciation project, The movie data is from the Douban list, and the literary in the public domain.
-
-## Example of usage
-Clone this project and go to the project root directory. Perform the following operations in turn:
+## 使用示例
+克隆此项目并转到项目根目录，依次执行：
 
 ```npm init```
 
@@ -30,11 +28,11 @@ Clone this project and go to the project root directory. Perform the following o
 
 ```npm run build```
 
-When using Lin UI, be sure to check the options of ES6 to Es5 and NPM module.
-[![WARNING](https://cdn.talelin.com/%E6%9C%AC%E5%9C%B0%E8%AE%BE%E7%BD%AE.png)](https://cdn.talelin.com/%E6%9C%AC%E5%9C%B0%E8%AE%BE%E7%BD%AE.png) 
+使用 Lin-UI 务必勾选Es6 转 ES5和使用 npm 模块选项。
+[![WARNING](https://cdn.talelin.com/%E6%9C%AC%E5%9C%B0%E8%AE%BE%E7%BD%AE.png)](https://cdn.talelin.com/%E6%9C%AC%E5%9C%B0%E8%AE%BE%E7%BD%AE.png)
 
-## Contributing guidelines
-See [CODE_OF_CONDUCT.md](https://github.com/AmazonPython/sun-flower/blob/master/CODE_OF_CONDUCT.md).
+## 贡献指南
+参见 [CODE_OF_CONDUCT_CN.md](https://github.com/AmazonPython/sun-flower/blob/master/CODE_OF_CONDUCT_CN.md)。
 
 ## License
 Sunflower is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT) and [Anti 996 license](https://github.com/996icu/996.ICU/blob/master/LICENSE).
